@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://nodejs.org/static/images/logo.svg" />
+
+    <title>TECH STACK EXPLORER</title>
+
+    <style>
+      /* RESET — UNCHANGED */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 4rem 4rem 9rem;
+        line-height: 1.6;
+        font-family: "Inter", "Nunito Sans", system-ui, sans-serif;
+        color: #e5e7eb;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #111827, #020617);
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-size: 4.6rem;
+        font-weight: 700;
+        text-align: center;
+        color: #f9fafb;
+        letter-spacing: -0.02em;
+        margin-bottom: 3rem;
+        position: relative;
+        animation: fadeDown 0.8s ease forwards;
+      }
+
+      h1::before {
+        content: "";
+        display: block;
+        width: 9rem;
+        height: 4px;
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        margin: 2rem auto 0;
+        border-radius: 10px;
+        animation: glow 2.5s ease-in-out infinite;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 115rem;
+        margin: 0 auto;
+      }
+
+      .cards-container {
+        margin-top: 6rem;
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      .card {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.6rem;
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: stretch;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+        animation: cardEnter 0.6s ease forwards;
+      }
+
+      .card:hover {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+        border-color: rgba(56, 189, 248, 0.35);
+      }
+
+      .card__emoji {
+        font-size: 4.5rem;
+        padding: 2.5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.25));
+      }
+
+      .card__title-box {
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .card__title {
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: #f9fafb;
+      }
+
+      .card__details {
+        display: flex;
+        flex: 1;
+      }
+
+      .card__detail-box {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .card__detail-box:last-child {
+        border-right: none;
+      }
+
+      .card__detail {
+        font-size: 1.5rem;
+        padding: 2rem 2.5rem;
+        color: #cbd5f5;
+        white-space: nowrap;
+      }
+
+      .card__detail--organic {
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.15em;
+        color: #22c55e;
+        text-transform: uppercase;
+        animation: pulse 2s infinite;
+      }
+
+      .card__detail--price {
+        font-weight: 600;
+        color: #e5e7eb;
+      }
+
+      .card__link:link,
+      .card__link:visited {
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        color: #020617;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 2.5rem 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .card__link:hover,
+      .card__link:active {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+      }
+
+      /* LOGIC — DO NOT TOUCH */
+      .not-organic {
+        display: none;
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes cardEnter {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🛠 Tech Stack Explorer ⚙️</h1>
+
+      <div class="cards-container">{%PRODUCT_CARDS%}</div>
+    </div>
+  </body>
+</html>

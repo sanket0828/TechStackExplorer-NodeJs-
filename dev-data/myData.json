@@ -1,0 +1,123 @@
+[
+  {
+    "id": 0,
+    "productName": "Node.js",
+    "image": "🟢",
+    "from": "OpenJS Foundation",
+    "nutrients": "Event-driven, Non-blocking I/O, JavaScript runtime",
+    "quantity": "LTS v18+",
+    "price": "Free",
+    "organic": true,
+    "description": "Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to run JavaScript on the server side. It is designed to build scalable network applications using an event-driven, non-blocking I/O model. Node.js is widely used for building REST APIs, real-time applications, microservices, and backend systems. Its vast npm ecosystem makes it one of the most popular backend technologies in modern web development."
+  },
+  {
+    "id": 1,
+    "productName": "MongoDB",
+    "image": "🍃",
+    "from": "MongoDB Inc.",
+    "nutrients": "NoSQL, Document-based, Flexible schema",
+    "quantity": "Community & Atlas",
+    "price": "Free / Paid",
+    "organic": false,
+    "description": "MongoDB is a NoSQL document-oriented database designed for scalability and flexibility. It stores data in JSON-like documents, making it easier to work with dynamic and hierarchical data structures. MongoDB is commonly used in modern applications where rapid development, horizontal scaling, and high availability are required. It is widely adopted in startups and enterprises alike."
+  },
+  {
+    "id": 2,
+    "productName": "Redis",
+    "image": "🔴",
+    "from": "Redis Ltd.",
+    "nutrients": "In-memory storage, Caching, Pub/Sub",
+    "quantity": "Single-node / Cluster",
+    "price": "Free / Paid",
+    "organic": false,
+    "description": "Redis is an in-memory data structure store commonly used as a cache, message broker, or session store. It supports various data structures such as strings, hashes, lists, sets, and sorted sets. Redis is known for its extremely fast performance and is often used to reduce database load, manage sessions, and enable real-time features in applications."
+  },
+  {
+    "id": 3,
+    "productName": "Docker",
+    "image": "🐳",
+    "from": "Docker Inc.",
+    "nutrients": "Containerization, Isolation, Portability",
+    "quantity": "Images & Containers",
+    "price": "Free / Paid",
+    "organic": false,
+    "description": "Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight containers. These containers ensure consistency across development, testing, and production environments. Docker is widely used in DevOps workflows to simplify deployment, improve scalability, and reduce environment-related issues."
+  },
+  {
+    "id": 4,
+    "productName": "Postman",
+    "image": "📬",
+    "from": "Postman Inc.",
+    "nutrients": "API testing, Request automation, Documentation",
+    "quantity": "Collections & Workspaces",
+    "price": "Free / Paid",
+    "organic": false,
+    "description": "Postman is an API development and testing tool that enables developers to design, test, and document APIs efficiently. It provides a user-friendly interface for sending HTTP requests, validating responses, and automating API tests. Postman is widely used by backend and frontend developers to ensure API reliability and collaboration across teams."
+  },
+  {
+    "id": 5,
+    "productName": "Git",
+    "image": "🌱",
+    "from": "Community (Originally by Linus Torvalds)",
+    "nutrients": "Version control, Distributed system, Collaboration",
+    "quantity": "Latest Stable",
+    "price": "Free",
+    "organic": true,
+    "description": "Git is a distributed version control system used to track changes in source code during software development. It enables multiple developers to collaborate efficiently and manage project history."
+  },
+  {
+    "id": 6,
+    "productName": "Linux",
+    "image": "🐧",
+    "from": "Linux Foundation",
+    "nutrients": "Operating system, Open kernel, Secure",
+    "quantity": "Multiple Distributions",
+    "price": "Free",
+    "organic": true,
+    "description": "Linux is a free and open-source operating system kernel that powers servers, desktops, cloud infrastructure, and embedded systems worldwide."
+  },
+  {
+    "id": 7,
+    "productName": "Nginx",
+    "image": "⚙️",
+    "from": "F5 (Originally Igor Sysoev)",
+    "nutrients": "Web server, Reverse proxy, Load balancing",
+    "quantity": "Stable Release",
+    "price": "Free / Paid",
+    "organic": true,
+    "description": "Nginx is a high-performance web server and reverse proxy commonly used to serve static content, handle load balancing, and improve application scalability."
+  },
+  {
+    "id": 8,
+    "productName": "GitHub",
+    "image": "🐙",
+    "from": "Microsoft",
+    "nutrients": "Code hosting, Collaboration, CI/CD",
+    "quantity": "Repositories & Actions",
+    "price": "Free / Paid",
+    "organic": false,
+    "description": "GitHub is a cloud-based platform for hosting and collaborating on Git repositories. It provides tools for version control, issue tracking, and automation workflows."
+  },
+  {
+    "id": 9,
+    "productName": "Visual Studio Code",
+    "image": "🧠",
+    "from": "Microsoft",
+    "nutrients": "Code editor, Extensions, Debugging",
+    "quantity": "Stable Release",
+    "price": "Free",
+    "organic": false,
+    "description": "Visual Studio Code is a lightweight yet powerful source code editor with support for debugging, extensions, and modern development workflows."
+  },
+  {
+    "id": 10,
+    "productName": "React",
+    "image": "⚛️",
+    "from": "Meta (Facebook)",
+    "nutrients": "UI library, Components, Virtual DOM",
+    "quantity": "v18+",
+    "price": "Free",
+    "organic": true,
+    "description": "React is a JavaScript library for building user interfaces using reusable components. It enables efficient UI updates through a virtual DOM and is widely used for single-page applications."
+  }
+]

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
+      rel="stylesheet"
+    />
+
+    <title>{%PRODUCTNAME%} {%IMAGE%} /// TECH STACK EXPLORER</title>
+
+    <style>
+      /* RESET — UNCHANGED */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 4rem 4rem 9rem;
+        line-height: 1.6;
+        font-family: "Inter", "Nunito Sans", system-ui, sans-serif;
+        color: #e5e7eb;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #111827, #020617);
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-size: 4.6rem;
+        font-weight: 700;
+        text-align: center;
+        color: #f9fafb;
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+        animation: fadeDown 0.8s ease forwards;
+      }
+
+      h1::before {
+        content: "";
+        display: block;
+        width: 9rem;
+        height: 4px;
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        margin: 2rem auto 0;
+        border-radius: 10px;
+        animation: glow 2.5s ease-in-out infinite;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 110rem;
+        margin: 0 auto;
+      }
+
+      .product {
+        width: 60rem;
+        margin: 9rem auto 0;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+        border-radius: 1.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.55);
+        position: relative;
+        animation: fadeUp 0.8s ease forwards;
+      }
+
+      .product__hero {
+        position: relative;
+        height: 22rem;
+        overflow: hidden;
+      }
+
+      .product__hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right bottom,
+          rgba(34, 197, 94, 0.45),
+          rgba(56, 189, 248, 0.45)
+        );
+        z-index: 10;
+      }
+
+      .product__emoji {
+        font-size: 14rem;
+        position: absolute;
+        opacity: 0.85;
+        filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.35));
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .product__organic {
+        position: absolute;
+        top: -3.5rem;
+        right: -3.5rem;
+        z-index: 1000;
+        height: 10rem;
+        width: 10rem;
+        background: linear-gradient(to bottom right, #22c55e, #38bdf8);
+        border-radius: 50%;
+        transform: rotate(12deg);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: pulse 2.2s infinite;
+      }
+
+      .product__organic h5 {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: #020617;
+        letter-spacing: 0.15em;
+        text-align: center;
+      }
+
+      .product__back:link,
+      .product__back:visited {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        z-index: 1000;
+        color: #020617;
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        border-radius: 100rem;
+        padding: 0.8rem 2rem;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .product__back:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+      }
+
+      .product__name {
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        padding: 1.6rem;
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: #020617;
+        text-align: center;
+        letter-spacing: -0.01em;
+      }
+
+      .product__details {
+        background: rgba(255, 255, 255, 0.04);
+        padding: 4rem 5rem;
+        font-size: 1.6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.6rem;
+        color: #cbd5f5;
+      }
+
+      .product__description {
+        padding: 4.5rem 5rem;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: #e5e7eb;
+      }
+
+      .product__link:link,
+      .product__link:visited {
+        display: block;
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        color: #020617;
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.8rem;
+        text-align: center;
+        letter-spacing: 0.12em;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .product__link:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 35px rgba(56, 189, 248, 0.6);
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          opacity: 0.5;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: rotate(12deg) scale(1);
+        }
+        50% {
+          transform: rotate(12deg) scale(1.06);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🛠 Tech Stack Explorer ⚙️</h1>
+
+      <figure class="product">
+        <!-- <div class="product__organic {%NOT_ORGANIC%}"><h5>Open Source</h5></div> -->
+
+        <a href="/overview" class="product__back">
+          <span class="emoji-left">👈</span>Back
+        </a>
+
+        <div class="product__hero">
+          <span class="product__emoji product__emoji--1">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--2">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--4">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--5">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--3">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--6">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--7">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--8">{%IMAGE%}</span>
+          <span class="product__emoji product__emoji--9">{%IMAGE%}</span>
+        </div>
+
+        <h2 class="product__name">{%PRODUCTNAME%}</h2>
+
+        <div class="product__details">
+          <p><span class="emoji-left">🏢</span>Tool {%FROM%}</p>
+          <p><span class="emoji-left">⚙️</span> {%NUTRIENTSNAME%}</p>
+          <p><span class="emoji-left">📦</span>{%QUANTITY%}</p>
+          <p><span class="emoji-left">🏷</span> {%PRICE%}</p>
+        </div>
+
+        <a href="#" class="product__link">
+          <span class="emoji-left">📖</span>
+          <span>View Documentation</span>
+        </a>
+
+        <p class="product__description">{%DESCRIPTION%}</p>
+      </figure>
+    </div>
+  </body>
+</html>
