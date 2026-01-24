@@ -1,13 +1,21 @@
 {
   "name": "techstackexplorer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learning NodeJs",
+  "keywords": [],
+  "homepage": "https://github.com/sanket0828/TechStackExplorer-NodeJs-#readme",
+  "bugs": {
+    "url": "https://github.com/sanket0828/TechStackExplorer-NodeJs-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanket0828/TechStackExplorer-NodeJs-.git"
+  },
+  "license": "ISC",
+  "author": "Sanket Kachave",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  }
 }
